@@ -11,7 +11,7 @@ An attacker who can gain control of an authenticator will often be able to masqu
 - *Something you have* may be lost, damaged, stolen from the owner or cloned by an attacker. For example, an attacker who gains access to the owner’s computer might copy a software authenticator. A hardware authenticator might be stolen, tampered with, or duplicated.
 
 - *Something you know* may be disclosed to an attacker. The attacker might guess a memorized secret. Where the authenticator is a shared secret, the attacker could gain access to the CSP or verifier and obtain the secret value or perform a dictionary attack on a hash of that value. An attacker may observe the entry of a PIN or passcode, find a written record or journal entry of a PIN or passcode, or may install malicious software (e.g., a keyboard logger) to capture the secret. Additionally, an attacker may determine the secret through offline attacks on a hashed password database maintained by the verifier.
-    
+
 - *Something you are* may be replicated. An attacker may obtain a copy of the subscriber’s fingerprint and construct a replica - assuming that the biometric system(s) employed do not block such attacks by employing robust liveness detection techniques.
 
 - *Out of band* secrets may be intercepted. An attacker may receive a challenge or response by eavesdropping on the primary or secondary communications channel. The attacker might then authenticate their own channel or save the message for later replay.
@@ -65,7 +65,7 @@ Related mechanisms that assist in mitigating the threats identified above are su
 
 <div class="text-center" markdown="1">
 
-**Table 8-1 - Mitigating Authenticator Threats**
+**Table 8-2 - Mitigating Authenticator Threats**
 
 </div>
 
@@ -92,7 +92,7 @@ Related mechanisms that assist in mitigating the threats identified above are su
 | | Provide secure display of identity of verifier and relying party.
 | | Maintain software-based keys in restricted-access storage.
 
-There are several other strategies that may be applied to mitigate the threats described in Table 5:
+There are several other strategies that may be applied to mitigate the threats described in Table 8-2:
 
 - *Multiple factors* make successful attacks more difficult to accomplish. If an attacker needs to both steal a cryptographic authenticator and guess a memorized secret, then the work to discover both factors may be too high.
 
