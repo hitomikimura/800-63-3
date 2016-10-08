@@ -31,7 +31,7 @@
 <!-- Secrets used for session binding:  -->
 
 - インタラクションの間、通常はユーザ認証のすぐ後で、セッション ホストによって生成されなければならない (SHALL)。
-- 承認された乱数生成器を使用して生成された、少なくとも 64 bit のエントロピーを含まねばならない (SHALL)。
+- 少なくとも 64 bit のエントロピーを含む、承認された random bit generator で生成されなければならない。 (SHALL)。
 - ユーザーのログアウト時に、セッション主体によって消去または無効にされなければならない (SHALL)。
 - ユーザーがログアウトするとき、またはシークレットの期限が切れたとみなされるとき、ユーザー エンドポイントから消去されなければならない (SHOULD)。
 - クロスサイトスクリプティング攻撃 (XSS) によるローカルストレージの暴露の可能性のため、HTML5 のローカル ストレージなど、安全でない場所に配置すべきでない (SHOULD NOT)。
@@ -100,7 +100,16 @@ OAuth アクセス トークンは、認証イベントののち、ユーザに�
 
 <!-- When a session is terminated due to a time-out or other action, the user MAY reauthenticate using their primary authentication mechanism or an appropriate subset thereof, depending on the AAL. -->
 
-| AAL | Requirement      |
+<a name="63bSec7-Table1"></a>
+
+<div class="text-center" markdown="1">
+
+<!-- **Table 7-1.  AAL Reauthentication Requirements** -->
+**Table 表 7-1. AAL ごとの再認証の要件**
+
+</div>
+
+| AAL | 要件      |
 | --- | ---------------- |
 | 1   | 任意の 1 つのファクターの提示 |
 | 2   | 任意の 1 つのファクターの提示 |
